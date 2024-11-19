@@ -1,0 +1,54 @@
+{% include 'admin1\Navbar.html' %}
+
+<style type="text/css">
+@media(max-width:667px){
+    .form{
+        margin-left:10px !important;
+        width: 95%;
+        margin:20px
+        
+    }
+}
+
+
+</style>
+<div class="container">
+    <div class="row">
+        <form action="/admin1/save_account/" method="post" style="margin-top:200px;margin-left:350px;box-shadow:0px 0px 3px 0px rgb(225, 81, 9);padding:20px;padding-bottom:100px;border-radius:20px" class="form">
+            <h4 class="text-center text-danger" style="font-weight:normal">Create Account</h4>
+
+            {% csrf_token %}
+
+            <div class="row" style="margin-top:20px">
+                <div class="col-md-6 text-danger" style="margin-top:20px">
+                    Enter Your Name:<br>
+                    <input type="text" placeholder="Enter Name" name="admin_name" class="form-control" required>
+                </div>
+
+                <div class="col-md-6 text-danger" style="margin-top:20px">
+                    Enter Your Mobile Number:<br>
+                    <input type="number" placeholder="Enter Mobile Number" name="admin_number" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 text-danger" style="margin-top:20px">
+                    Enter Your Email :<br>
+                    <input type="email" placeholder="Enter email" name="admin_email" class="form-control" required>
+                </div>
+
+                <div class="col-md-6 text-danger" style="margin-top:20px">
+                    Enter Your Password:<br>
+                    <input type="password" placeholder="Enter password" name="admin_password" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button class="btn btn-danger text-white rounded" style="margin-top:30px"><ion-icon name="person" class="text-white" style="margin-right:10px;margin-top:4px;font-size:15px"></ion-icon>Create Account</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+{% include 'admin1\Footer.html' %}

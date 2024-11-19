@@ -1,0 +1,791 @@
+{% include 'website/Navbar.html' %}
+
+
+
+  <!-- header -->
+  <header class="header-banner" style="background-color:aliceblue">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="header-content header-content-full">
+                    <small>{{ slider.slider_subtitle }}</small>
+                    <h1>{{slider.slider_title}}</h1>
+                    <p>{{slider.slider_details}}</p>
+                    <div class="header-button">
+                        <a href="{{slider.slider_button1_link}}" target="_blank" class="btn no-radius">{{slider.slider_button1}} <i class="flaticon-right-arrow-2"></i></a>
+                        <a href="{{slider.slider_button2_link}}" target="_blank" class="no-radius btn btn-border btn-border-black">{{slider.slider_button2}} <i class="flaticon-right-arrow-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 pb-30">
+                <div class="header-content-image text-center">
+                    <img src="/{{slider.slider_image}}" width="100%" height="140%" alt="header">
+                    <div class="header-video-button">
+                        <a href="{{slider.slider_video_link}}" id="video-popup"><i class="flaticon-play-button"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- .end header -->
+
+
+ <!-- feature-section -->
+ <section class="feature-section pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <small>Cysec Features</small>
+            <h2>Precious Features Included With Cysec</h2>
+        </div>
+        <div class="row">
+            {% for i in feature %}
+            <div class="col-sm-12 col-md-6 col-lg-4 pb-30">
+                <div class="feature-card">
+                    <div class="feature-card-inner">
+                        <div class="feature-card-thumb">
+                        <img src="/{{i.feature_image}}" width="50%">   
+                     </div>
+                        <div class="feature-card-content">
+                            <h3>{{i.feature_title}}</h3>
+                            <p>{{i.feature_details}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+           
+        </div>
+    </div>
+</section>
+<!-- .end feature-section -->
+<!-- about-section -->
+<section class="about-section pb-70">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-lg-6 pb-30">
+                <div class="about-item-image text-center">
+                    <img src="/static/assets/images/about-image.png" alt="about">
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 pb-10">
+                <div class="max-585 mx-auto mx-lg-0">
+                    <div class="about-item-text">
+                        <div class="section-title section-title-left text-start">
+                            <small>About Cysec</small>
+                            <h2>Our Approach Is Simple But Not Time-Wasting</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamamet, consectetur adipisi</p>
+                        </div>
+                        <div class="about-content-list">
+                            <div class="about-list-item">
+                                <h3><span>01.</span> Trusted Partner</h3>
+                                <p>Lorem ipsum dolor sit amet, consetur adipisicing elit sed do eiusmod qua. Utenim do</p>
+                            </div>
+                            <div class="about-list-item">
+                                <h3><span>02.</span> Product Security</h3>
+                                <p>Lorem ipsum dolor sit amet, consetur adipisicing elit sed do eiusmod qua. Utenim do</p>
+                            </div>
+                            <div class="about-list-item">
+                                <h3><span>03.</span> System Security</h3>
+                                <p>Lorem ipsum dolor sit amet, consetur adipisicing elit sed do eiusmod qua. Utenim do</p>
+                            </div>
+                            <div class="about-list-item">
+                                <h3><span>04.</span> Operational Security</h3>
+                                <p>Lorem ipsum dolor sit amet, consetur adipisicing elit sed do eiusmod qua. Utenim do</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end about-section -->
+<!-- company-info-section -->
+<section class="company-info-section pb-100 bg-off-white">
+    <div class="company-info-bg extra-bottom-space">
+        <div class="container">
+            <div class="section-title position-relative section-title-white mb-0">
+                <small>Our Company</small>
+                <h2 class="m-0">We Run All kinds Of Security That Help You To Success</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="company-info-box section-minus-margin border-bottom">
+            <div class="company-info-data pt-100 pb-70 bg-white position-relative">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-lg-4 pb-30">
+                        <div class="info-item-image text-center">
+                            <img src="/static/assets/images/info-item-img.png" alt="info">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-8">
+                        <div class="counter-item-content">
+                            <div class="counter-content-list">
+                                <div class="counter-content-thumb">
+                                    <i class="flaticon-secure"></i>
+                                </div>
+                                <div class="counter-content-text">
+                                    <h3 class="color-main"><span class="counter">2,700</span> <sup>+</sup></h3>
+                                    <p>Cybersecurity Projects</p>
+                                </div>
+                            </div>
+                            <div class="counter-content-list">
+                                <div class="counter-content-thumb">
+                                    <i class="flaticon-customer"></i>
+                                </div>
+                                <div class="counter-content-text">
+                                    <h3 class="color-main"><span class="counter">1,350</span> <sup>+</sup></h3>
+                                    <p>Customers Served Globally</p>
+                                </div>
+                            </div>
+                            <div class="counter-content-list">
+                                <div class="counter-content-thumb">
+                                    <i class="flaticon-read"></i>
+                                </div>
+                                <div class="counter-content-text">
+                                    <h3 class="color-main"><span class="counter">350</span> <sup>+</sup></h3>
+                                    <p>Cybersecurity Experts</p>
+                                </div>
+                            </div>
+                            <div class="counter-content-list">
+                                <div class="counter-content-thumb">
+                                    <i class="flaticon-star"></i>
+                                </div>
+                                <div class="counter-content-text">
+                                    <h3 class="color-main"><span class="counter">250</span> <sup>%</sup></h3>
+                                    <p>Customer Retention Rate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end company-info-section -->
+<!-- service-section -->
+<section class="service-section p-tb-100">
+    <div class="container">
+        <div class="section-title">
+            <small>Cybersecurity Services</small>
+            <h2>Cyber Security Solutions </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="service-tab-area">
+            <div class="service-grid-carousel">
+                <div class="service-tab-list item service-tab-active" data-service-tab-item="1">
+                    <div class="service-tab-list-inner">
+                        <i class="flaticon-secure-data"></i>
+                        <h4>Website Protection</h4>
+                    </div>
+                </div>
+                <div class="service-tab-list item"  data-service-tab-item="2">
+                    <div class="service-tab-list-inner">
+                        <i class="flaticon-credit-card"></i>
+                        <h4>Hacking Protection</h4>
+                    </div>
+                </div>
+                <div class="service-tab-list item"  data-service-tab-item="3">
+                    <div class="service-tab-list-inner">
+                        <i class="flaticon-lock"></i>
+                        <h4>Confidential Information</h4>
+                    </div>
+                </div>
+                <div class="service-tab-list item"  data-service-tab-item="4">
+                    <div class="service-tab-list-inner">
+                        <i class="flaticon-mobile-protection"></i>
+                        <h4>Mobile Security</h4>
+                    </div>
+                </div>
+                <div class="service-tab-list item"  data-service-tab-item="5">
+                    <div class="service-tab-list-inner">
+                        <i class="flaticon-chat"></i>
+                        <h4>Security Advisory</h4>
+                    </div>
+                </div>
+                <div class="service-tab-list item"  data-service-tab-item="6">
+                    <div class="service-tab-list-inner">
+                        <i class="flaticon-customer-support"></i>
+                        <h4>Technical Assurance</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="service-details-carousel">
+                <div class="service-details-carousel-item"  data-service-tab-details="1">
+                    <div class="service-tab-details row align-items-center">
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-text">
+                                <h3>Website Protection</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <a href="service-details.html" class="btn">Discover More <i class="flaticon-right-arrow-2"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-image service-details-frame">
+                                <img src="/static/assets/images/service-tab-1.jpg" alt="service">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-details-carousel-item"  data-service-tab-details="2">
+                    <div class="service-tab-details row align-items-center">
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-image service-details-frame">
+                                <img src="/static/assets/images/service-tab-3.jpg" alt="service">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-text">
+                                <h3>Hacking Protection</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <a href="service-details.html" class="btn">Discover More <i class="flaticon-right-arrow-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-details-carousel-item"  data-service-tab-details="3">
+                    <div class="service-tab-details row align-items-center">
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-text">
+                                <h3>Confidential Information</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <a href="service-details.html" class="btn">Discover More <i class="flaticon-right-arrow-2"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-image service-details-frame">
+                                <img src="/static/assets/images/service-tab-2.jpg" alt="service">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-details-carousel-item"  data-service-tab-details="4">
+                    <div class="service-tab-details row align-items-center">
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-image service-details-frame">
+                                <img src="/static/assets/images/service-tab-4.jpg" alt="service">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-text">
+                                <h3>Mobile Security</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <a href="service-details.html" class="btn">Discover More <i class="flaticon-right-arrow-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-details-carousel-item"  data-service-tab-details="5">
+                    <div class="service-tab-details row align-items-center">
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-text">
+                                <h3>Security Advisory</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <a href="service-details.html" class="btn">Discover More <i class="flaticon-right-arrow-2"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-image service-details-frame">
+                                <img src="/static/assets/images/service-tab-6.jpg" alt="service">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-details-carousel-item"  data-service-tab-details="6">
+                    <div class="service-tab-details row align-items-center">
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-image service-details-frame">
+                                <img src="/static/assets/images/service-tab-5.jpg" alt="service">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 service-tab-details-item">
+                            <div class="service-details-text">
+                                <h3>Technical Assurance</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                                <a href="service-details.html" class="btn">Discover More <i class="flaticon-right-arrow-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end service-section -->
+<!-- about-section -->
+<section class="about-section pt-100 bg-off-white">
+    <div class="container-fluid">
+        <div class="row align-items-end">
+            <div class="col-12 order-2 order-lg-1 col-lg-4">
+                <div class="about-item-image text-center">
+                    <img src="/static/assets/images/about-image-two.png" alt="about">
+                </div>
+            </div>
+            <div class="col-12 order-1 order-lg-2 col-lg-8 pb-70 mobile-pb-0">
+                <div class="max-910">
+                    <div class="about-item-text">
+                        <div class="section-title section-title-left text-start">
+                            <small>Our Challenge</small>
+                            <h2>We Can Help Organization <br> Cybersecurity With Our Best Afford</h2>
+                        </div>
+                        <div class="about-content-list-two">
+                            <div class="about-list-item-two">
+                                <div class="about-list-item-selector">
+                                    <i class="flaticon-check-1"></i>
+                                </div>
+                                <div class="about-list-item-text">
+                                    <h3>Identifying Threats</h3>
+                                    <p>Lorem ipsum dolor sit ameconsectetur adipied t laboresectetur adipisitetur adipied </p>
+                                </div>
+                            </div>
+                            <div class="about-list-item-two">
+                                <div class="about-list-item-selector">
+                                    <i class="flaticon-check-1"></i>
+                                </div>
+                                <div class="about-list-item-text">
+                                    <h3>Testing Cyber Security</h3>
+                                    <p>Lorem ipsum dolor sit ameconsectetur adipied t laboresectetur adipisitetur adipied</p>
+                                </div>
+                            </div>
+                            <div class="about-list-item-two">
+                                <div class="about-list-item-selector">
+                                    <i class="flaticon-check-1"></i>
+                                </div>
+                                <div class="about-list-item-text">
+                                    <h3>Managing Cloud Security</h3>
+                                    <p>Lorem ipsum dolor sit ameconsectetur adipied t laboresectetur adipisitetur adipied</p>
+                                </div>
+                            </div>
+                            <div class="about-list-item-two">
+                                <div class="about-list-item-selector">
+                                    <i class="flaticon-check-1"></i>
+                                </div>
+                                <div class="about-list-item-text">
+                                    <h3>Cyber Risk Assessment</h3>
+                                    <p>Lorem ipsum dolor sit ameconsectetur adipied t laboresectetur adipisitetur adipied</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end about-section -->
+<!-- service-section -->
+<div class="service-section service-bg pt-100 pb-70">
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6 pb-30">
+                <div class="service-title section-title section-title-left section-title-white m-0 text-start">
+                    <small>Cybersecurity Protect</small>
+                    <h2>Protect Your Website Server & Web Application</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamamet, consectetur adipisi</p>
+                    <a href="services.html" class="btn">Discover More <i class="flaticon-right-arrow-2"></i></a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="service-product-grid">
+                    <div class="service-product-item">
+                        <div class="service-product-item-inner">
+                            <div class="service-top-icon">
+                                <i class="flaticon-checked"></i>
+                            </div>
+                            <div class="service-product-icon">
+                                <i class="flaticon-server"></i>
+                            </div>
+                            <div class="service-product-text">
+                                <h3>Database Security</h3>
+                                <p>Lorem ipsum dolor sit ametur adipied t laboresectetur aditur adipiedetur aditur</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-product-item">
+                        <div class="service-product-item-inner">
+                            <div class="service-top-icon">
+                                <i class="flaticon-checked"></i>
+                            </div>
+                            <div class="service-product-icon">
+                                <i class="flaticon-secure-data"></i>
+                            </div>
+                            <div class="service-product-text">
+                                <h3>Web Security</h3>
+                                <p>Lorem ipsum dolor sit ametur adipied t laboresectetur aditur adipiedetur aditur</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-product-item">
+                        <div class="service-product-item-inner">
+                            <div class="service-top-icon">
+                                <i class="flaticon-checked"></i>
+                            </div>
+                            <div class="service-product-icon">
+                                <i class="flaticon-secure"></i>
+                            </div>
+                            <div class="service-product-text">
+                                <h3>Server Security</h3>
+                                <p>Lorem ipsum dolor sit ametur adipied t laboresectetur aditur adipiedetur aditur</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-product-item">
+                        <div class="service-product-item-inner">
+                            <div class="service-top-icon">
+                                <i class="flaticon-checked"></i>
+                            </div>
+                            <div class="service-product-icon">
+                                <i class="flaticon-locker"></i>
+                            </div>
+                            <div class="service-product-text">
+                                <h3>Locker Security</h3>
+                                <p>Lorem ipsum dolor sit ametur adipied t laboresectetur aditur adipiedetur aditur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- .end service-section -->
+<!-- choose-section -->
+<section class="choose-section pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <small>All-in Solution</small>
+            <h2>Reasons You Rely On Us</h2>
+        </div>
+        <div class="choose-content-grid">
+            <div class="choose-content-item choose-content-label pb-10">
+                <div class="choose-content-inner">
+                    <div class="choose-label-list active" data-choose-label="1">
+                        <h4>24/7 Technical Support</h4>
+                    </div>
+                    <div class="choose-label-list" data-choose-label="2">
+                        <h4>Security Consultation</h4>
+                    </div>
+                    <div class="choose-label-list" data-choose-label="3">
+                        <h4>Product Consultation</h4>
+                    </div>
+                    <div class="choose-label-list" data-choose-label="4">
+                        <h4>High Quality Service</h4>
+                    </div>
+                    <div class="choose-label-list" data-choose-label="5">
+                        <h4>Cyber Security Expert</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="choose-content-item choose-content-details pb-30">
+                <div class="choose-content-inner">
+                    <div class="choose-details-item active" data-choose-details="1">
+                        <h3>24/7 Technical Support</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna  ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                    </div>
+                    <div class="choose-details-item" data-choose-details="2">
+                        <h3>Security Consultation</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+                    </div>
+                    <div class="choose-details-item" data-choose-details="3">
+                        <h3>Product Consultation</h3>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+                    </div>
+                    <div class="choose-details-item" data-choose-details="4">
+                        <h3>High Quality Service</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna  ullamco laboris nisi ut aliquip ex ea commodo co</p>
+                    </div>
+                    <div class="choose-details-item" data-choose-details="5">
+                        <h3>Cyber Security Expert</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end choose-section -->
+<!-- testimonial-section -->
+<section class="testimonial-section testimonial-bg mt-100">
+    <div class="testimonial-full-area transform-minus-100 border-bottom">
+        <div class="testimonial-full-area-inner p-tb-100">
+            <div class="container">
+                <div class="section-title">
+                    <h2>In Client’s Words</h2>
+                </div>
+                <div class="testimonial-carousel owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="testimonial-carousel-content">
+                            <p class="testimonial-paragraph">“Transparency is an overall net win consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quiqa Ut e nostrud exercitation ullaco laboris nisi ut aliquip”</p>
+                            <div class="testimonial-client-info">
+                                <div class="testimonial-client-thumb">
+                                    <img src="/static/assets/images/client-1.jpg" alt="client">
+                                </div>
+                                <div class="testimonial-client-data">
+                                    <h3 class="testimonial-name">Peter Yaworski</h3>
+                                    <h4 class="testimonial-designation"><span>Security Engineer,</span>Aila</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-carousel-content">
+                            <p class="testimonial-paragraph">Security is a good net win consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quiqa Ut e nostrud exercitation ullaco laboris nisi ut aliquip”</p>
+                            <div class="testimonial-client-info">
+                                <div class="testimonial-client-thumb">
+                                    <img src="/static/assets/images/client-2.jpg" alt="client">
+                                </div>
+                                <div class="testimonial-client-data">
+                                    <h3 class="testimonial-name">Devit Clark</h3>
+                                    <h4 class="testimonial-designation"><span>Management Engineer,</span>Blim</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-carousel-content">
+                            <p class="testimonial-paragraph">“Transparency is an overall net win consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quiqa Ut e nostrud exercitation ullaco laboris nisi ut aliquip”</p>
+                            <div class="testimonial-client-info">
+                                <div class="testimonial-client-thumb">
+                                    <img src="/static/assets/images/client-3.jpg" alt="client">
+                                </div>
+                                <div class="testimonial-client-data">
+                                    <h3 class="testimonial-name">John Yaworski</h3>
+                                    <h4 class="testimonial-designation"><span>Security Engineer,</span>Rink</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end testimonial-section -->
+<!-- blog-section -->
+<section class="blog-section pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <small>News & Blog</small>
+            <h2>Cyber Security Blog</h2>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 pb-30">
+                <div class="blog-card blog-card-dark">
+                    <div class="blog-card-thumb">
+                        <img src="/static/assets/images/blog-1.jpg" alt="blog">
+                    </div>
+                    <div class="blog-card-content">
+                        <small>Cyber Security Awards</small>
+                        <h3>Clutch Names CyberHunter Leader in Canada</h3>
+                        <a href="blog-details.html" class="btn">Learn More <i class="flaticon-right-arrow-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 pb-30">
+                <div class="blog-card blog-card-dark">
+                    <div class="blog-card-thumb">
+                        <img src="/static/assets/images/blog-2.jpg" alt="blog">
+                    </div>
+                    <div class="blog-card-content">
+                        <small>Hacking Protection</small>
+                        <h3>How To Identify And Avoid Phishing Attacks?</h3>
+                        <a href="blog-details.html" class="btn">Learn More <i class="flaticon-right-arrow-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 pb-30 offset-md-3 offset-lg-0">
+                <div class="blog-card blog-card-dark">
+                    <div class="blog-card-thumb">
+                        <img src="/static/assets/images/blog-3.jpg" alt="blog">
+                    </div>
+                    <div class="blog-card-content">
+                        <small>Cloud Security</small>
+                        <h3>Why Use CyberHunter For Your Cloud Security</h3>
+                        <a href="blog-details.html" class="btn">Learn More <i class="flaticon-right-arrow-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end blog-section -->
+<!-- partner-section -->
+<section class="partner-section p-tb-100 bg-off-white">
+    <div class="container">
+        <div class="section-title">
+            <small>Partners</small>
+            <h2>We're Working With</h2>
+        </div>
+        <div class="partner-carousel default-carousel owl-carousel owl-theme">
+            <div class="item">
+                <div class="partner-thumb">
+                    <a href="#">
+                        <img src="/static/assets/images/partner-1.png" alt="partner">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="partner-thumb">
+                    <a href="#">
+                        <img src="/static/assets/images/partner-2.png" alt="partner">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="partner-thumb">
+                    <a href="#">
+                        <img src="/static/assets/images/partner-3.png" alt="partner">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="partner-thumb">
+                    <a href="#">
+                        <img src="/static/assets/images/partner-4.png" alt="partner">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="partner-thumb">
+                    <a href="#">
+                        <img src="/static/assets/images/partner-1.png" alt="partner">
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="partner-thumb">
+                    <a href="#">
+                        <img src="/static/assets/images/partner-2.png" alt="partner">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end partner-section -->
+<!-- contact-section -->
+<section class="contact-section">
+    <div class="container-fluid p-0">
+        <div class="row m-0">
+            <div class="col-12 col-md-5 p-0">
+                <div class="contact-item contact-item-dark p-tb-100 full-height">
+                    <div class="contact-item-info">
+                        <h2 class="color-white">Contact Us</h2>
+                        <p class="color-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="contact-info-list">
+                            <div class="contact-info-list-item">
+                                <div class="contact-info-list-thumb">
+                                    <i class="flaticon-phone-call"></i>
+                                </div>
+                                <div class="contact-info-list-text">
+                                    <h3><a href="tel:0061-665-66785">+61 665 66785</a></h3>
+                                    <p>Call Now!</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-list-item">
+                                <div class="contact-info-list-thumb">
+                                    <i class="flaticon-contact-book"></i>
+                                </div>
+                                <div class="contact-info-list-text">
+                                    <h3>Level 2, 11 York St, Sydney 2000</h3>
+                                    <p>Address</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-list-item">
+                                <div class="contact-info-list-thumb">
+                                    <i class="flaticon-envelope-1"></i>
+                                </div>
+                                <div class="contact-info-list-text">
+                                    <h3><a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#a1c8cfc7ce93919395e1c2d8d2c4c28fc2cecc"><span class="__cf_email__" data-cfemail="70191e161f424042443013090315135e131f1d">[email&#160;protected]</span></a></h3>
+                                    <p>Email Now</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-7 p-0">
+                <div class="contact-item contact-item-details p-tb-100">
+                    <div class="contact-item-details-inner">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="name">Name*</label>
+                                            <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="phone_number">Phone*</label>
+                                            <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your phone number" class="form-control" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="email">Email Address*</label>
+                                            <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="msg_subject">Subject*</label>
+                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" />
+                                        </div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="form-group custom-form-group mb-20">
+                                        <div class="input-group">
+                                            <label for="message">Message</label>
+                                            <textarea name="message" class="form-control" id="message" rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="input-checkbox mb-20">
+                                        <input type="checkbox" id="contact1">
+                                        <label for="contact1">Accept <a href="terms-conditions.html">Terms & Conditions</a> and <a href="privacy-policy-2.html">Privacy Policy</a></label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <button class="btn" type="submit">
+                                        Send Message <i class="flaticon-right-arrow-2"></i>
+                                    </button>
+                                    <div id="msgSubmit"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .end contact-section -->
+
+
+
+{% include 'website/Footer.html' %}
